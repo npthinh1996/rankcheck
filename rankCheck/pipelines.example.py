@@ -18,3 +18,13 @@ class RankcheckPipeline(object):
 
         self.conn.close()
         return item
+
+class GetrankPipeline(object):
+    def process_item(self, item, spider):
+        self.conn = connect(host='localhost', user='root', password='', db='scraper')
+        self.cursor = self.conn.cursor()
+        self.cursor.execute("INSERT INTO rankcrawl (keyword, url, domain, position, page, rank, search) VALUES ('{}', '{}', '{}', {}, {}, {}, '{}')".format(item['keyword'], item['url'], item['domain'], item['position'], item['page'], item['rank'], item['search']))
+        self.conn.commit()
+
+        self.conn.close()
+        return item

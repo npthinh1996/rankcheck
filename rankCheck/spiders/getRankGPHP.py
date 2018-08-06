@@ -1,7 +1,7 @@
 from re import sub
 from scrapy import Spider, Request
 from urllib.parse import unquote_plus
-from ..items import GetrankkItem
+from ..items import GetrankItem
 
 class Scraper(Spider):
     name = 'getRankGPHP'
@@ -19,7 +19,7 @@ class Scraper(Spider):
         yield Request(url=url, callback=self.parse, meta={'idxR':idxR})
 
     def parse(self, response):
-        rankItem = GetrankkItem()
+        rankItem = GetrankItem()
         
         idx = 0
         idxR = response.meta['idxR']

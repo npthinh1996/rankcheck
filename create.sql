@@ -23,3 +23,14 @@ CREATE TABLE rankcheck (
     searchId INT,
     FOREIGN KEY (keyId) REFERENCES keywords (id)
 );
+
+DROP TABLE IF EXISTS rankcrawl;
+CREATE TABLE rankcrawl (
+    keyword VARCHAR(255) NOT NULL,
+    url VARCHAR(255),
+    domain VARCHAR(255),
+    position VARCHAR(255),
+    page INT,
+    rank INT,
+    search VARCHAR(255)
+);

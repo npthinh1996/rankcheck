@@ -66,6 +66,7 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
 #    'rankCheck.pipelines.RankcheckPipeline': 300,
+#    'rankCheck.pipelines.GetrankPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

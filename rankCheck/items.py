@@ -17,7 +17,7 @@ class RankcheckItem(Item):
     date = Field()
     searchId = Field()
 
-class GetrankkItem(Item):
+class GetrankItem(Item):
     keyword = Field()
     url = Field()
     domain = Field()
