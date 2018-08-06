@@ -1,6 +1,12 @@
 # Rank Check
 Kiểm tra thứ hạng từ khóa bằng việc thu thập kết quả của [Google](https://www.google.com) và [Bing](https://www.bing.com). Công cụ này được viết dựa trên [Scrapy](https://scrapy.org) và [PHP](http://www.php.net). Có 2 phiên bản dành cho giao diện web và command line để kết nối lưu dữ liệu trực tiếp lên [MySQL](https://www.mysql.com) database.
 
+## Update
+### Ngày 06/08/2018
+- Cho phép Giao diện web kết nối database để cập nhật kết quả crawl về.
+- Tạo thêm bảng [rankcrawl](https://github.com/npthinh1996/rankcheck/blob/dc7a323ed352fa06aaa7557be270856318bcb3ba/create.sql#L27) để lưu dữ liệu.
+
+## Tùy chỉnh
 ### Yêu cầu
 - [Python 3](https://www.python.org)
 - [Scrapy](https://scrapy.org)
@@ -48,6 +54,7 @@ Kết quả trả về là IP phân tích từ trang [whatismyipaddress](https:/
 Cho phép người dùng nhập `Từ khóa`, `Tên miền`, chọn `Số trang` và `Khu vực` để thu thập kết quả thứ hạng từ khóa.
 
 ### Tùy chỉnh
+- Bỏ comment tại file [settings.py](https://github.com/npthinh1996/rankcheck/blob/dc7a323ed352fa06aaa7557be270856318bcb3ba/rankCheck/settings.py#L69) để cập nhật tự động kết quả crawl được lên database.
 - Do trong quá trình chạy, tool có tạo thêm file tạm nên cần phải thiết lập lại permission cho thư mục `rankcheck` có quyền được ghi dữ liệu:
 ```sh
 $ sudo chmod 777 rankcheck
