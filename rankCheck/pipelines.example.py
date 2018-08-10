@@ -13,7 +13,7 @@ class GetrankPipeline(object):
     def process_item(self, item, spider):
         self.conn = connect(host='...', user='...', password='...', db='scraper')
         self.cursor = self.conn.cursor()
-        self.cursor.execute("INSERT INTO rankcrawl (keyword, url, title, domain, rank, date) VALUES ('{}', '{}', '{}', '{}', {}, '{}')".format(item['keyword'], item['url'], item['title'], item['domain'], item['rank'], item['date']))
+        self.cursor.execute("INSERT INTO rankcrawl (keyword, url, domain, rank, date) VALUES ('{}', '{}', '{}', {}, '{}')".format(item['keyword'], item['url'], item['domain'], item['rank'], item['date']))
         self.conn.commit()
 
         self.conn.close()
