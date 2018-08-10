@@ -1,7 +1,3 @@
 __pycache__/
-*.jl
-*.json
-impKey.py
+tmp/*
 pipelines.py
-rankBCheck.py
-rankGCheck.py

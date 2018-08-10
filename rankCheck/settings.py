@@ -14,7 +14,6 @@ BOT_NAME = 'rankCheck'
 SPIDER_MODULES = ['rankCheck.spiders']
 NEWSPIDER_MODULE = 'rankCheck.spiders'
 
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
 
@@ -65,7 +64,6 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-#    'rankCheck.pipelines.RankcheckPipeline': 300,
 #    'rankCheck.pipelines.GetrankPipeline': 300,
 }
 

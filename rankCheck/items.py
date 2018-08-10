@@ -20,8 +20,7 @@ class RankcheckItem(Item):
 class GetrankItem(Item):
     keyword = Field()
     url = Field()
+    title = Field()
     domain = Field()
-    position = Field()
-    page = Field()
     rank = Field()
-    search = Field()
+    date = Field()
