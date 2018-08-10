@@ -7,16 +7,6 @@
 
 from scrapy import Item, Field
 
-class RankcheckItem(Item):
-    keyId = Field()
-    url = Field()
-    domain = Field()
-    position = Field()
-    page = Field()
-    rank = Field()
-    date = Field()
-    searchId = Field()
-
 class GetrankItem(Item):
     keyword = Field()
     url = Field()
